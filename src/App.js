@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import urls from "./components/utils/urls";
 import { Typography } from "@mui/material";
+import { FormattedMessage } from "react-intl";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 const Titulo = () => {
   return (
     <Typography variant="h1" align="center">
-      Titulo
+      <FormattedMessage id="Title" />
     </Typography>
   );
 }
