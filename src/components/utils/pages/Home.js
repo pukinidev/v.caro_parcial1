@@ -86,7 +86,7 @@ function Home() {
               </Table>
             </TableContainer>
           </Grid2>
-          <Grid2 item>
+          <Grid2 item xs={2}>
             <Card
                 sx={{
                     padding: "1rem",
@@ -94,7 +94,7 @@ function Home() {
                     borderRadius: "1rem",
                 }}
             >
-              <CardContent>
+              
               <Typography variant="h3"
               sx={{
                 textAlign: "center",
@@ -102,8 +102,9 @@ function Home() {
               }}>{robot.nombre}</Typography>
               <Typography variant="body1">Año fabricacion: {robot.añoFabricacion}</Typography>
               <Typography variant="body1">Capacida de Procesamiento: {robot.capacidadProcesamiento}</Typography>
-             
-              </CardContent>
+                <Typography sx={{
+                    fontSize: "0.5rem",
+                }}>Humor: {robot.humor}</Typography>
             </Card>
           </Grid2>
         </Grid2>
