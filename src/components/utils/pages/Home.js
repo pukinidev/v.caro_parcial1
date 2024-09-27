@@ -103,7 +103,7 @@ function Home() {
               <Typography variant="body1">Año fabricacion: {robot.añoFabricacion}</Typography>
               <Typography variant="body1">Capacida de Procesamiento: {robot.capacidadProcesamiento}</Typography>
                 <Typography sx={{
-                    fontSize: "0.5rem",
+                    fontSize: "0.8rem",
                 }}>Humor: {robot.humor}</Typography>
             </Card>
           </Grid2>
