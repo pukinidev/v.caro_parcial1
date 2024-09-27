@@ -1,5 +1,6 @@
 const urls = {
-    'home': "/",
+    'home': "/home",
+    'login': "/",
 };
 
 export default urls;
