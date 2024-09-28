@@ -36,14 +36,14 @@ function Login() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = async ()  => {
+  const handleSubmit = async () => {
     const URL = "http://localhost:3001/login";
     const response = await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         login: user,
         password: password,
       }),
@@ -52,12 +52,9 @@ function Login() {
     if (response.status === 200) {
       setError(false);
       navigate("/home");
-    }
-    else if (response.status === 401) {
+    } else if (response.status === 401) {
       setError(true);
     }
-
-    
   };
 
   return (
