@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card, Container, Typography, Box, CardContent } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { FormattedMessage } from "react-intl";
 
 function Robot({ robot }) {
   const [selectedRobot, setSelectedRobot] = useState({});
@@ -70,7 +71,7 @@ function Robot({ robot }) {
         }}
       >
         <ArrowForwardIcon sx={{ fontSize: 18, marginRight: "0.2rem" }} />
-        <strong>Año de Fabricacion:</strong>{" "}
+        <strong><FormattedMessage id="manufacturing year"/>:</strong>{" "}
         <span style={{ marginLeft: "2px" }}></span>
         {selectedRobot.añoFabricacion}
       </Typography>
@@ -83,7 +84,7 @@ function Robot({ robot }) {
         }}
       >
         <ArrowForwardIcon sx={{ fontSize: 18,  marginRight: "0.2rem" }} />
-        <strong>Capacidad de Procesamiento: </strong>
+        <strong><FormattedMessage id="processing capacity"/>:</strong>
         {""}
         <span style={{ marginLeft: "4px" }}>
           {selectedRobot.capacidadProcesamiento}
@@ -99,7 +100,7 @@ function Robot({ robot }) {
         }}
       >
         <ArrowForwardIcon sx={{ fontSize: 18,  marginRight: "0.2rem" }} />
-        <strong>Humor:</strong> 
+        <strong><FormattedMessage id="humor"/>:</strong> 
         <span style={{ marginLeft: "4px" }}>
         {selectedRobot.humor}
         </span>

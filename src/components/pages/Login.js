@@ -12,6 +12,7 @@ import Grid from "@mui/material/Grid2";
 import FormControl from "@mui/material/FormControl";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -70,7 +71,7 @@ function Login() {
               textAlign: "center",
             }}
           >
-            Adopta un Robot con Robot Lovers!
+            <FormattedMessage id="title" />
           </Typography>
         </Item>
         <img
@@ -87,7 +88,7 @@ function Login() {
               paddingBottom: "0px",
             }}
           >
-            Inicio de sesión
+            <FormattedMessage id="login"/> 
           </Typography>
         </Item>
         <Item elevation={0} sx={{ textAlign: "center" }}>
@@ -99,7 +100,7 @@ function Login() {
                 color: "#000000",
               }}
             >
-              Nombre de usuario
+             <FormattedMessage id="username"/>  
             </FormLabel>
             <TextField
               variant="outlined"
@@ -127,7 +128,7 @@ function Login() {
                 color: "#000000",
               }}
             >
-              Contraseña
+            <FormattedMessage id="password"/>
             </FormLabel>
             <TextField
               type="password"
@@ -170,7 +171,7 @@ function Login() {
                     boxShadow: "0px",
                   }}
                 >
-                  Ingresar
+                  <FormattedMessage id="enter"/>
                 </Button>
               </Item>
             </Grid>
@@ -191,7 +192,7 @@ function Login() {
                     boxShadow: "0px",
                   }}
                 >
-                  Cancelar
+                  <FormattedMessage id="cancel"/>
                 </Button>
               </Item>
             </Grid>

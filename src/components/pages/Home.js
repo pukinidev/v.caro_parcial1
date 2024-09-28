@@ -11,6 +11,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Robot from "./Robot";
+import { FormattedMessage } from "react-intl";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -63,7 +64,7 @@ function Home() {
               color: "#000000",
             }}
           >
-            Adopta un Robot con Robot Lovers!
+            <FormattedMessage id="title"/>
           </Typography>
         </Item>
         <img
@@ -93,7 +94,7 @@ function Home() {
                         fontWeight: "bold",
                       }}
                     >
-                      Nombre
+                      <FormattedMessage id="name"/>
                     </StyledTableCell>
                     <StyledTableCell
                       align="right"
@@ -101,7 +102,7 @@ function Home() {
                         fontWeight: "bold",
                       }}
                     >
-                      Modelo
+                      <FormattedMessage id="model"/>
                     </StyledTableCell>
                     <StyledTableCell
                       align="right"
@@ -109,7 +110,7 @@ function Home() {
                         fontWeight: "bold",
                       }}
                     >
-                      Empresa Fabricante
+                      <FormattedMessage id="manufacturing company"/>
                     </StyledTableCell>
                   </TableRow>
                 </TableHead>
