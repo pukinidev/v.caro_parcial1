@@ -70,7 +70,7 @@ function Robot({ robot }) {
         }}
       >
         <ArrowForwardIcon sx={{ fontSize: 18, marginRight: "0.2rem" }} />
-        <strong>Año fabricacion:</strong>{" "}
+        <strong>Año de Fabricacion:</strong>{" "}
         <span style={{ marginLeft: "2px" }}></span>
         {selectedRobot.añoFabricacion}
       </Typography>
