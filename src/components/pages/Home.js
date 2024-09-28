@@ -115,7 +115,9 @@ function Home() {
                 </TableHead>
                 <TableBody>
                   {robots.map((robot) => (
-                    <TableRow key={robot.id} onClick={() => handleClick(robot)}>
+                    <TableRow key={robot.id} onClick={() => handleClick(robot)} sx={{
+                      cursor: "pointer",
+                    }}>
                       <StyledTableCell component="th" scope="row" sx={{
                         fontWeight: "bold",
                       }}>
