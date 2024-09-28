@@ -36,19 +36,33 @@ function Login() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = () => {
-    if (user.user === user && user.password === password) {
-      console.log("Usuario correcto");
+  const handleSubmit = async ()  => {
+
+    const URL = "http://localhost:3001/login";
+    const response = await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ 
+        login: user,
+        password: password,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.status === "success") {
       setError(false);
       navigate("/home");
-    } else {
-      console.log("Usuario incorrecto");
+    } 
+    else if (result.status === "error") {
       setError(true);
     }
   };
 
   return (
-    <Container spacing={2} sx={{ marginTop: "1rem" }}>
+    <Container spacing={2} sx={{ marginBottom: "4rem" }}>
       <Stack spacing={2}>
         <Item elevation={0}>
           <Typography
@@ -69,8 +83,13 @@ function Login() {
         />
         <Item elevation={0}>
           <Typography
-            
-            sx={{ textAlign: "center", color: "#000000", fontSize: "32px", fontWeight: "700", paddingBottom: "0px" }}
+            sx={{
+              textAlign: "center",
+              color: "#000000",
+              fontSize: "32px",
+              fontWeight: "700",
+              paddingBottom: "0px",
+            }}
           >
             Inicio de sesión
           </Typography>
@@ -91,11 +110,18 @@ function Login() {
               required
               fullWidth
               onChange={handleUser}
+              error={error}
               sx={{
                 marginBottom: "0.3rem",
                 width: "556px",
                 backgroundColor: "rgba(217, 217, 217, 1)",
                 borderRadius: "0",
+
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    border: error ? "1px solid rgba(106, 11, 11, 1)" : "none",
+                  },
+                },
               }}
             />
             <FormLabel
@@ -111,12 +137,18 @@ function Login() {
               type="password"
               variant="outlined"
               onChange={handlePassword}
+              error={error}
               required
-              sx={
-                {
-                  backgroundColor: "rgba(217, 217, 217, 1)",
-                }
-              }
+              sx={{
+                backgroundColor: "rgba(217, 217, 217, 1)",
+                borderRadius: "0",
+
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    border: error ? "1px solid rgba(106, 11, 11, 1)" : "none",
+                  },
+                },
+              }}
             />
           </FormControl>
           <Grid

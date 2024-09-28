@@ -54,7 +54,7 @@ function Home() {
   return (
     <Container
       spacing={2}
-      sx={{ width: "100%", marginTop: "4rem", marginBottom: "2rem" }}
+      sx={{ width: "100%", marginBottom: "4rem" }}
     >
       <Stack spacing={2}>
         <Item elevation={0}>
@@ -73,7 +73,7 @@ function Home() {
           src="https://s3-alpha-sig.figma.com/img/6be0/8970/63bb2d1e43b5d380b6078a7b3a2d56a7?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Fw2jUle4ph-OvQCKCgeXE13cL8eqF0~x46PB5Ex9ZeGitifxGVpHkmgVWrSyoX40yf8kDFyDG0kCOsznQzvCm0ZRb6XBZa5wBkuSP72z2zVgbM0VRQF2LisfTuqH6zBQ6XxW2mHLr-SJ9YKwtG5qeZgWHU-63kWUHQ2WAdjoQYOQmQQbnCwb9ovR4qWeOQ4YSFoDkr7P-oiW~T9vjfymu8J6k0Wjfs8eWsu77z63tgntK~UEcReqX5fDEJ2LokvINxIvxXv~xUNNQUH0785O-R0R2AbNVDsjfwFCG1b-C-oNuHCsY88sNBPUEr6TLV39DYSEGU4TZrzYQK-FCQ82oQ__"
           alt="robot"
         />
-        <Grid2 container spacing={2}>
+        <Grid2 container spacing={2} >
           <Grid2 item xs={2}>
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 200 }} aria-label="simple table">
@@ -133,7 +133,7 @@ function Home() {
               </Table>
             </TableContainer>
           </Grid2>
-          <Grid2 item>
+          <Grid2 item >
             {selected && (
               <Card
                 elevation={0}
