@@ -11,19 +11,20 @@ import localeEsMessages from "./locales/es";
 import localeEnMessages from "./locales/en";
 
 const locale = navigator.language;
-const messages = locale === "es" ? localeEsMessages : localeEnMessages;
+const messages = locale.startsWith("es") ? localeEsMessages : localeEnMessages;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <IntlProvider locale={locale} messages= {messages}>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <IntlProvider locale={locale} messages={messages}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
     </IntlProvider>
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
