@@ -71,9 +71,13 @@ function Home() {
           alt="robot"
         />
         <Grid2 container spacing={2}>
-          <Grid2 item xs={2}>
+          <Grid2 item xs={2} sx={{
+            width: {
+              lg: "63.89%",
+            },
+          }}>
             <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 200 }} aria-label="simple table">
+              <Table sx={{ minWidth: 100 }} aria-label="simple table">
                 <TableHead>
                   <TableRow>
                     <StyledTableCell
@@ -112,7 +116,9 @@ function Home() {
                 <TableBody>
                   {robots.map((robot) => (
                     <TableRow key={robot.id} onClick={() => handleClick(robot)}>
-                      <StyledTableCell component="th" scope="row">
+                      <StyledTableCell component="th" scope="row" sx={{
+                        fontWeight: "bold",
+                      }}>
                         {robot.id}
                       </StyledTableCell>
                       <StyledTableCell align="right">
