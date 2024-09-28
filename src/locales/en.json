@@ -11,5 +11,6 @@
     "manufacturing company": "Manufacturing Company",
     "manufacturing year": "Year of Manufacture",
     "processing capacity": "Processing Capacity",
-    "humor": "Humor"
+    "humor": "Humor",
+    "error": "Authentication error. Please check your credentials."
 }

@@ -11,5 +11,6 @@
     "manufacturing company" : "Empresa fabricante",
     "manufacturing year": "Año de Fabricación",
     "processing capacity": "Capacidad de Procesamiento",
-    "humor": "Humor"
+    "humor": "Humor",
+    "error": "Error de autenticación. Revise sus crendenciales."
 }

@@ -208,7 +208,7 @@ function Login() {
                 fontWeight: "700",
               }}
             >
-              Error de autenticación. Revise sus crendenciales.
+              <FormattedMessage id="error"/>
             </Typography>
           )}
         </Item>
