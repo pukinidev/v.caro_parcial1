@@ -20,12 +20,4 @@ function App() {
   );
 }
 
-const Titulo = () => {
-  return (
-    <Typography variant="h1" align="center">
-      <FormattedMessage id="Title" />
-    </Typography>
-  );
-}
-
 export default App;
