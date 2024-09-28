@@ -49,15 +49,15 @@ function Login() {
       }),
     });
 
-    const result = await response.json();
-
-    if (result.status === "success") {
+    if (response.status === 200) {
       setError(false);
       navigate("/home");
-    } 
-    else if (result.status === "error") {
+    }
+    else if (response.status === 401) {
       setError(true);
     }
+
+    
   };
 
   return (
