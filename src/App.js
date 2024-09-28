@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import urls from "./components/utils/urls";
 import { Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
-import Home from "./components/utils/pages/Home";
-import Login from "./components/utils/pages/Login";
-import Footer from "./components/utils/pages/Footer";
+import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
+import Footer from "./components/pages/Footer";
 
 function App() {
   return (

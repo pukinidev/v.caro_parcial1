@@ -37,7 +37,6 @@ function Login() {
   };
 
   const handleSubmit = async ()  => {
-
     const URL = "http://localhost:3001/login";
     const response = await fetch(URL, {
       method: "POST",
@@ -204,8 +203,10 @@ function Login() {
             <Typography
               sx={{
                 textAlign: "center",
+                paddingTop: "0.5rem",
+                marginRight: "3.8rem",
                 color: "rgba(205, 50, 50, 1)",
-                fontSize: "21px",
+                fontSize: "20px",
                 fontWeight: "700",
               }}
             >

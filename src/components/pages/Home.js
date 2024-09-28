@@ -2,7 +2,7 @@ import React from "react";
 import Stack from "@mui/material/Stack";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
-import { Card, Container, Grid2, Typography } from "@mui/material";
+import { Card, CardContent, Container, Grid2, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,7 +10,6 @@ import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import CloseIcon from "@mui/icons-material/Close";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -147,7 +146,6 @@ function Home() {
                   border: "1.5px solid #000000",
                 }}
               >
-                <CloseIcon onClick={() => setSelected(false)} cursor="" />
                 <Typography
                   variant="h4"
                   sx={{
