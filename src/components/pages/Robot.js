@@ -3,7 +3,7 @@ import { Card, Container, Typography, Box, CardContent } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 function Robot({ robot }) {
-  const [selectedRobot, setSelectedRobot] = useState([]);
+  const [selectedRobot, setSelectedRobot] = useState({});
 
   const imageURL = `https://raw.githubusercontent.com/fai-aher/T34-Wiki-Backup/main/images/robot${selectedRobot.id}.png`;
 
